@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Users</title>
+</head>
+<body>
+	<p><a href="{%url 'quote:index' %}" style="margin-left: 800px;">Dashboard</a> | <a href="{%url 'login:logout' %}">Logout</a></p>
+	<h2>Posts by: {{user.name}}</h2>
+
+	{%for item in count%}
+	<h2>Count: {{item.num_quotes}}</h2>
+	{%endfor%}
+
+
+	{%for item in quote%}
+	<p><span style="color: red; font-size: 25px;">{{item.creator}}:</span> {{item.content}}</p>
+	{%endfor%}
+
+
+
+</body>
+</html>
